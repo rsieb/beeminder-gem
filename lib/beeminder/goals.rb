@@ -2,6 +2,9 @@
 
 module Beeminder
   class Goal
+    ## New attribute accessors added
+    attr_accessor :roadstatuscolor, :delta_text, :baremin, :baremintotal, :safesum, :lasttouch, :gunits
+
     # @return [String] The final part of the URL of the goal, used as an identifier.
     attr_accessor :slug
 

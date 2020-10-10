@@ -3,7 +3,7 @@
 module Beeminder
   class Goal
     ## New attribute accessors added
-    attr_accessor :roadstatuscolor, :delta_text, :baremin, :baremintotal, :safesum, :lasttouch, :gunits
+    attr_accessor :roadstatuscolor, :delta_text, :baremin, :baremintotal, :safesum, :lasttouch, :gunits, :id, :initday
 
     # @return [String] The final part of the URL of the goal, used as an identifier.
     attr_accessor :slug
@@ -198,6 +198,11 @@ module Beeminder
         "secret"     => @secret || false,
         "datapublic" => @datapublic || false,
       }
+    end
+
+    def to_hash
+      warn "Original overridden to_hash is now short_hash"
+      super
     end
 
     private

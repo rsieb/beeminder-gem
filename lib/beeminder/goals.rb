@@ -3,7 +3,7 @@
 module Beeminder
   class Goal
     ## New attribute accessors added
-    attr_accessor :roadstatuscolor, :delta_text, :baremin, :baremintotal, :safesum, :lasttouch, :gunits,
+    attr_accessor :roadstatuscolor, :delta_text, :baremin, :baremintotal, :safesum, :lasttouch, :gunits
 
     ## New attribute readers added
     attr_reader :id, :initday
